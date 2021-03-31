@@ -1,0 +1,19 @@
+{
+  "name": "padawan-learning",
+  "version": "1.0.0",
+  "description": "Repository for learning exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZachHawkes/padawan-learning.git"
+  },
+  "author": "Zach Hawkes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZachHawkes/padawan-learning/issues"
+  },
+  "homepage": "https://github.com/ZachHawkes/padawan-learning#readme"
+}

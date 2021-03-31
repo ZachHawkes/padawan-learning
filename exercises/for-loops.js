@@ -23,7 +23,36 @@ function findTheSum(array) {
   return totalSum;
 }
 
+// find all of the odd numbers and return them in an array
+const oddNumbersArray = [1,2,3,4,5,6,7,8,9,10];
+function findAllOddNumbers(array) {
+  const answer = [];
+  for (let i = 0; i < array.length; i++) {
+    let value = array[i];
+    if ((value % 2) != 0) {
+      console.log(value)
+      answer.push(value)
+    } 
+  }
+  return answer;
+}
+
+
+// find the sum of all the even numbers
+function sumAllEvenNumbers(array) {
+
+}
+
+const testString = "asdhisjhahsiudhsahsha";
+//find the number of A's in a string
+function findTheA(string) {
+
+}
+
 // const minimum = findMinimum(testArray);
 // console.log("Minimum of Array is", minimum);
-const sum = findTheSum(arr);
-console.log("Sum of array is", sum);
+// const sum = findTheSum(arr);
+// console.log("Sum of array is", sum);
+const onlyOddNumbers = [1,3,5,7,9];
+const oddNumberResult = findAllOddNumbers(oddNumbersArray);
+console.log("OddNumberResult is", oddNumberResult, onlyOddNumbers);
