@@ -40,57 +40,39 @@ function findAllOddNumbers(array) {
 
 // find the sum of all the even numbers
 const evenNumbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-function sumAllEvenNumbers(array) {
-  const answer1 = [];
-  for (let i = 0; i < array.length; i++) {
-    if ((array[i]) % 2 === 0) {
-      console.log(array[i]);
-      answer1.push(array[i])
-
-    }
-  }
-
-  return answer1
-}
-
-const evenNumbers = sumAllEvenNumbers(evenNumbersArray);
-console.log(evenNumbers);
-
 function evenNumberSum(array) {
   let sum = 0;
   for (let i = 0; i < array.length; i++) {
-    sum += array[i];
+    if ((array[i]) % 2 === 0) {
+      sum += array[i];
+    }
   }
   return sum;
 }
 
-const totalEvenNumbers = evenNumberSum(evenNumbers);
+const totalEvenNumbers = evenNumberSum(evenNumbersArray);
 console.log(totalEvenNumbers);
 
 
-const testString = "asdhisjhahsiudhsahsha";
+const testString = "a;sdlfasj;alskdjfalksdofinwelfaksdnofiasodfij";
 //find the number of A's in a string
-function findTheA(string) {
-  let countOfa = 0
-  for (let i = 0; i < string.length; i++) {
-    if (i == "a") {
-      countOfa += i;
-
+function findTheA(parameter) {
+  let countOfA = 0
+  for (let i = 0; i < parameter.length; i++) {
+    if (parameter[i] == "a") {
+      countOfA += 1;
     }
   }
-  return countOfa;
+  return countOfA;
 }
 
 const totalA = findTheA(testString);
 console.log(totalA)
 
-
-
-
 // const minimum = findMinimum(testArray);
 // console.log("Minimum of Array is", minimum);
 // const sum = findTheSum(arr);
 // console.log("Sum of array is", sum);
-const onlyOddNumbers = [1, 3, 5, 7, 9];
-const oddNumberResult = findAllOddNumbers(oddNumbersArray);
-console.log("OddNumberResult is", oddNumberResult, onlyOddNumbers);
+// const onlyOddNumbers = [1, 3, 5, 7, 9];
+// const oddNumberResult = findAllOddNumbers(oddNumbersArray);
+// console.log("OddNumberResult is", oddNumberResult, onlyOddNumbers);
