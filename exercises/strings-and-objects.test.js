@@ -10,7 +10,7 @@ describe('add function', () => {
     expect(stringsObjects.add('Hello', 'World')).toBe('Hello World');
   });
 
-  it.skip('should treat numberStrings as numbers', () => {
+  it('should treat numberStrings as numbers', () => {
     expect(stringsObjects.add('1', '2')).toBe(3);
   });
 });
