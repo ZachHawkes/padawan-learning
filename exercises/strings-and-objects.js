@@ -29,7 +29,8 @@ function addVersion2(x, y) {
 // HINT: Convert the string to an array
 function reverseString(str) {
   //const array = str.split('');
-  str.split("");
+  //str.split("");
+  String(str);
   for (let i = str.length - 1; i >= 0; i--) {
     console.log(str[i]);
 
@@ -37,7 +38,7 @@ function reverseString(str) {
   }
 }
 
-console.log(reverseString("Hello"));
+reverseString("Hello");
 
 // return true if the property is on the provided obj
 // return false if the property is not on the provided obj
