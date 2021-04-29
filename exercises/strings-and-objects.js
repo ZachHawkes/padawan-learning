@@ -2,14 +2,20 @@
 // elements could be strings or numbers
 // two strings hello, world should return "hello world"
 // two number should 1, 3 should return 4
+// support decimals/floats
 function add(x, y) {
-  const typeOfX = typeof x;
-  const typeOfY = typeof y;
-  if (typeOfX === "string" || typeOfY === "string") {
-    return `${x} ${y}`;
+  const convertedX = parseFloat(x);
+  const convertedY = parseFloat(y);
+  if(!isNaN(convertedX) && !isNaN(convertedY)) {
+    return convertedX + convertedY;
   } else {
-    return x + y;
+    return `${x} ${y}`;
   }
+}
+
+// two strings add together as numbers a little more efficient
+function addStrings(str1, str2) {
+  return parseInt(str1) + parseInt(str2);
 }
 
 function addVersion2(x, y) {
@@ -18,9 +24,6 @@ function addVersion2(x, y) {
   }
   return x + y;
 }
-
-// const helloWorld = add('hello', 'world');
-// console.log(helloWorld);
 
 // return the string in reverse order ie "hello" => "olleh";
 // HINT: Convert the string to an array
@@ -41,22 +44,6 @@ function reverseString(str) {
 function isPropertyInObject(property, obj) {
   return Boolean(obj[property]);
 }
-// two strings and add them together as numbers.
-function addStrings(str1, str2) {
-  let answer = 0;
-  answer = parseInt(str1) + parseInt(str2);
-  //console.log(answer);
-  return answer;
-}
-
-addStrings("23", "45");
-
-// two strings add together as numbers a little more efficient
-function addStrings2(str1, str2) {
-  return parseInt(str1) + parseInt(str2);
-}
-
-console.log(5 + addStrings2("3", "2"));
 
 module.exports = {
   add,
@@ -64,4 +51,3 @@ module.exports = {
   reverseString,
   isPropertyInObject,
 };
-console.log(isPropertyInObject("occupation", person));
