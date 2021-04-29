@@ -30,7 +30,6 @@ function findAllOddNumbers(array) {
   for (let i = 0; i < array.length; i++) {
     let value = array[i];
     if ((value % 2) != 0) {
-      console.log(value)
       answer.push(value)
     }
   }
@@ -51,7 +50,6 @@ function evenNumberSum(array) {
 }
 
 const totalEvenNumbers = evenNumberSum(evenNumbersArray);
-console.log(totalEvenNumbers);
 
 
 const testString = "a;sdlfasj;alskdjfalksdofinwelfaksdnofiasodfij";
@@ -66,13 +64,9 @@ function findTheA(parameter) {
   return countOfA;
 }
 
-const totalA = findTheA(testString);
-console.log(totalA)
-
-// const minimum = findMinimum(testArray);
-// console.log("Minimum of Array is", minimum);
-// const sum = findTheSum(arr);
-// console.log("Sum of array is", sum);
-// const onlyOddNumbers = [1, 3, 5, 7, 9];
-// const oddNumberResult = findAllOddNumbers(oddNumbersArray);
-// console.log("OddNumberResult is", oddNumberResult, onlyOddNumbers);
+module.exports = {
+  findMinimum,
+  findTheSum,
+  findAllOddNumbers,
+  evenNumberSum,
+}
