@@ -41,6 +41,22 @@ function reverseString(str) {
 function isPropertyInObject(property, obj) {
   return Boolean(obj[property]);
 }
+// two strings and add them together as numbers.
+function addStrings(str1, str2) {
+  let answer = 0;
+  answer = parseInt(str1) + parseInt(str2);
+  //console.log(answer);
+  return answer;
+}
+
+addStrings("23", "45");
+
+// two strings add together as numbers a little more efficient
+function addStrings2(str1, str2) {
+  return parseInt(str1) + parseInt(str2);
+}
+
+console.log(5 + addStrings2("3", "2"));
 
 module.exports = {
   add,
@@ -48,3 +64,4 @@ module.exports = {
   reverseString,
   isPropertyInObject,
 };
+console.log(isPropertyInObject("occupation", person));
