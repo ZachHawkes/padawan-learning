@@ -45,6 +45,29 @@ function isPropertyInObject(property, obj) {
   return Boolean(obj[property]);
 }
 
+// return the numbers both string and num types from obj in an obj
+// don't do anything with strings that cannot be converted to numbers
+const object1 = {
+  "a": 1,
+  "b": "2",
+  "c": "hello"
+}; 
+// would turn into 
+/*
+{"a": 1, "b": 2};
+*/
+function getNumbersFromObject(obj) {
+
+}
+
+// take 2d array and return an obj with first column as key
+// and the 2nd column as value
+// 2d array looks like [['key', 'value], ['key', 'value']]
+// obj should look like {key: 'value', key: 'value'}
+function convert2dArrayToObj(arr) {
+
+}
+
 module.exports = {
   add,
   addVersion2,
