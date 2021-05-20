@@ -56,6 +56,31 @@ const object1 = {
 /*
 {"a": 1, "b": 2};
 */
+
+/*if (object1 == !NaN) {
+  const entries = object1.entries(value);
+}
+
+const objToArr = Object.entries(object1);
+ console.log(objToArr)
+let newArray = objToArr.flat();
+
+
+
+objToArr.forEach(([key, value]) => {
+   console.log([key, value]);
+    if (key === !NaN && value === !NaN) {
+        console.log([key, value]);
+    }
+});
+objToArr.forEach(function (element){
+    if (element == !NaN) {
+      console.log(element);
+      console.log(objToArr);
+  }
+})
+*/
+
 function getNumbersFromObject(obj) {
 
 }
@@ -64,9 +89,16 @@ function getNumbersFromObject(obj) {
 // and the 2nd column as value
 // 2d array looks like [['key', 'value], ['key', 'value']]
 // obj should look like {key: 'value', key: 'value'}
-function convert2dArrayToObj(arr) {
 
-}
+const twoDArr = [["Tanner", "software tester"], ["Zach", "developer"]];
+function convert2dArrayToObj(arr) {
+  return arr.reduce((acc, val) => {
+    const [key, value] = val;
+    acc[key] = value;
+    return acc;
+   }, {});
+};
+
 
 module.exports = {
   add,
