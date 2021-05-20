@@ -57,32 +57,21 @@ const object1 = {
 {"a": 1, "b": 2};
 */
 
-/*if (object1 == !NaN) {
-  const entries = object1.entries(value);
-}
-
-const objToArr = Object.entries(object1);
- console.log(objToArr)
-let newArray = objToArr.flat();
-
-
-
-objToArr.forEach(([key, value]) => {
-   console.log([key, value]);
-    if (key === !NaN && value === !NaN) {
-        console.log([key, value]);
-    }
-});
-objToArr.forEach(function (element){
-    if (element == !NaN) {
-      console.log(element);
-      console.log(objToArr);
-  }
-})
-*/
 
 function getNumbersFromObject(obj) {
+  const objToArr = Object.entries(object1);
+  
+  objToArr.forEach(([key, value]) => {
+     console.log(key, value);
+      if (key === !NaN && value === !NaN) {
+          console.log(key, value);
+      }
+  });
 
+  // iterate over each key, value pair in object (done)
+  // store the key for values that are not a number or string representation of a number;
+  // delete that key from the obj;
+  // return the obj;
 }
 
 // take 2d array and return an obj with first column as key
@@ -92,12 +81,29 @@ function getNumbersFromObject(obj) {
 
 const twoDArr = [["Tanner", "software tester"], ["Zach", "developer"]];
 function convert2dArrayToObj(arr) {
-  return arr.reduce((acc, val) => {
-    const [key, value] = val;
+  return arr.reduce((acc, val) => { 
+    const [key, value] = val; // destructuring
     acc[key] = value;
     return acc;
    }, {});
 };
+
+function test(arr) {
+  const returnObj = {};
+  for(let i = 0; i < arr.length; i++) {
+    const key = arr[i][0];
+    const value = arr[i][1];
+    returnObj[key] = value;
+  }
+  return returnObj;
+}
+
+// swap the keys with the values of an obj
+// return the switched obj
+// obj = {a: 'z', b: 'y'} --> obj = {z: a, y: b};
+function swapKeysAndValues(obj) {
+
+}
 
 
 module.exports = {
