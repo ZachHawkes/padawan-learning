@@ -101,9 +101,18 @@ function test(arr) {
 // swap the keys with the values of an obj
 // return the switched obj
 // obj = {a: 'z', b: 'y'} --> obj = {z: a, y: b};
+const obj = {
+  a: 'z',
+  b: 'y',
+};
 function swapKeysAndValues(obj) {
+let newObj = {};
+Object.keys(obj).forEach ((key) => {
+    newObj[obj[key]] = key;
+});
 
 }
+
 
 
 module.exports = {
