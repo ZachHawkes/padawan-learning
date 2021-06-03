@@ -106,14 +106,13 @@ const obj = {
   b: 'y',
 };
 function swapKeysAndValues(obj) {
-let newObj = {};
-Object.keys(obj).forEach ((key) => {
-    newObj[obj[key]] = key;
-});
-
+  let newObj = {};
+  Object.keys(obj).forEach((key) => {
+    const valueOfKey = obj[key];
+    newObj[valueOfKey] = key;
+  });
+  return newObj;
 }
-
-
 
 module.exports = {
   add,
