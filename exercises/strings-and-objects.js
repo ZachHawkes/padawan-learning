@@ -57,20 +57,23 @@ const object1 = {
 {"a": 1, "b": 2};
 */
 function getNumbersFromObject(obj) {
-  const objToArr = Object.entries(object1);
+  const objToArr = Object.entries(obj);
   
+  // iterate over each key, value pair in object
   objToArr.forEach(([key, value]) => {
-     console.log(key, value);
-      if (key === !NaN && value === !NaN) {
-          console.log(key, value);
+     // delete that key from the obj;
+      if (isNaN(value) === true) {
+         delete obj[key];
+      } else {
+        // can be done here
       }
-  });
 
-  // iterate over each key, value pair in object (done)
-  // store the key for values that are not a number or string representation of a number;
-  // delete that key from the obj;
+  });
   // return the obj;
+  return obj;
 }
+
+console.log(getNumbersFromObject(object1));
 
 // take 2d array and return an obj with first column as key
 // and the 2nd column as value
@@ -118,7 +121,7 @@ function swapKeysAndValues(obj) {
 //return true if object matches schema. 
 // schema key value pair 'a': 'string'
 // obj key value pair 'a': 'hello world' -- VALID return true
-// obj key vvalue pair 'a': 1 -- INVALID return false
+// obj key value pair 'a': 1 -- INVALID return false
 function hasCleanData(obj, schema) {
 
 }
