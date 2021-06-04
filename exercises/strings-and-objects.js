@@ -56,8 +56,6 @@ const object1 = {
 /*
 {"a": 1, "b": 2};
 */
-
-
 function getNumbersFromObject(obj) {
   const objToArr = Object.entries(object1);
   
@@ -113,6 +111,18 @@ function swapKeysAndValues(obj) {
   });
   return newObj;
 }
+
+//schema is an object with key and dataType for that key
+//obj is object to compare against.
+//keys in obj and schema should match and datatypes of each should match
+//return true if object matches schema. 
+// schema key value pair 'a': 'string'
+// obj key value pair 'a': 'hello world' -- VALID return true
+// obj key vvalue pair 'a': 1 -- INVALID return false
+function hasCleanData(obj, schema) {
+
+}
+
 
 module.exports = {
   add,
