@@ -123,8 +123,22 @@ function swapKeysAndValues(obj) {
 // obj key value pair 'a': 'hello world' -- VALID return true
 // obj key value pair 'a': 1 -- INVALID return false
 function hasCleanData(obj, schema) {
+  const firstNameEqual = typeof obj.firstName == schema.firstName;
+   const ageEqual = typeof obj.age == schema.age;
+   return firstNameEqual, ageEqual; 
 
 }
+
+const schema = {
+  firstName: 'string',
+  age: 'number'
+}
+const obj1 = {
+  firstName : "Tanner",
+  age : 27
+};
+
+
 
 
 module.exports = {
