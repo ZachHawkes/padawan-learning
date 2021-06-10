@@ -65,7 +65,7 @@ function getNumbersFromObject(obj) {
       if (isNaN(value) === true) {
          delete obj[key];
       } else {
-        // can be done here
+        // can be done here(return number as number and not string)
       }
 
   });
@@ -123,23 +123,25 @@ function swapKeysAndValues(obj) {
 // obj key value pair 'a': 'hello world' -- VALID return true
 // obj key value pair 'a': 1 -- INVALID return false
 function hasCleanData(obj, schema) {
-  const firstNameEqual = typeof obj.firstName == schema.firstName;
-   const ageEqual = typeof obj.age == schema.age;
-   return firstNameEqual, ageEqual; 
+  // compare obj == schema
+  // comparison looks like typeof obj[key] == schema[key]
 
+  // convert one parameter into array
+  // iterate over the array and make above comparison
+  // if all comparisons return as true we return true
+  // if one comparison returns false we return false
 }
 
 const schema = {
   firstName: 'string',
-  age: 'number'
+  age: 'x'
 }
 const obj1 = {
   firstName : "Tanner",
   age : 27
 };
 
-
-
+console.log(hasCleanData(obj1, schema))
 
 module.exports = {
   add,

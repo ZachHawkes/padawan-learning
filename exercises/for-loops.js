@@ -64,6 +64,11 @@ function findTheA(parameter) {
   return countOfA;
 }
 
+// find the prime numbers less than n
+function findThePrimes(n) {
+
+}
+
 module.exports = {
   findMinimum,
   findTheSum,
