@@ -64,8 +64,20 @@ function findTheA(parameter) {
   return countOfA;
 }
 
+const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 // find the prime numbers less than n
 function findThePrimes(n) {
+  const answer = []
+  // loop through the array
+  for (let i = 0; i < numArray.length; i++) {
+    // find the numbers that are prime numbers
+    //Will not get 1, 2, 3, 5, 7,
+    if (!Number.isInteger(numArray[i]/2) && !Number.isInteger(numArray[i]/3) && !Number.isInteger(numArray[i]/5) && !Number.isInteger(numArray[i]/7) && numArray[i] < n && numArray[i] > 1) {
+    // return each of the prime numbers that are less than the parameter (n)
+      answer.push(numArray[i]);
+    }
+ }
+ return answer;
 
 }
 
