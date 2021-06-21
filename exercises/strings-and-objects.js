@@ -66,9 +66,15 @@ function getNumbersFromObject(obj) {
          delete obj[key];
       } else {
         // can be done here(return number as number and not string)
+        //loop through value of object
+        for (const prop in obj) {
+       //access the Value of the object
+       // convert value of the object into a number
+       (parseInt((obj[prop])));
+      
       }
-
-  });
+    }
+});
   // return the obj;
   return obj;
 }
