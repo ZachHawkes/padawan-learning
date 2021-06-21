@@ -64,22 +64,39 @@ function findTheA(parameter) {
   return countOfA;
 }
 
-const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-// find the prime numbers less than n
-function findThePrimes(n) {
-  const answer = []
-  // loop through the array
-  for (let i = 0; i < numArray.length; i++) {
-    // find the numbers that are prime numbers
-    //Will not get 1, 2, 3, 5, 7,
-    if (!Number.isInteger(numArray[i]/2) && !Number.isInteger(numArray[i]/3) && !Number.isInteger(numArray[i]/5) && !Number.isInteger(numArray[i]/7) && numArray[i] < n && numArray[i] > 1) {
-    // return each of the prime numbers that are less than the parameter (n)
-      answer.push(numArray[i]);
+function findPrimes(n) {
+  // answer variable holder
+  const answer = [];
+  // first for loop that loops through the up to the parameter n
+  for (let i = 2; i < n; i++) {
+    // create a variable and set the value to true (initial assumption for if the number i is prime)
+    let isPrime = true
+    // second for loop that loops up to every value of i; for every i it goes from 2 up to i
+    for (let j = 2; j < i; j++) {
+      // if i / j is a whole number than it is not prime, we do not want those numbers
+      if (i % j === 0) {
+        // reassigning the variable isPrime to false/ updating initial assumption.
+        isPrime = false;
+        // if i % j === 0 then we break out of the inner for loop/ short circuit so we don't have to loop through every number after the first value meets the condition.
+        break;
+      }
     }
- }
- return answer;
+    // if 
+    if (isPrime === true) {
+      answer.push(i);
+    }
+  }
+  return answer;
+}
+
+// find the value of n!
+// 6! = 6 * 5 * 4 * 3 * 2 * 1
+// 3! = 3 * 2 * 1
+function findFactorial(n) {
 
 }
+
+console.log(findPrimes(100));
 
 module.exports = {
   findMinimum,
