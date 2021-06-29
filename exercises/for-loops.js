@@ -67,7 +67,7 @@ function findTheA(parameter) {
 function findPrimes(n) {
   // answer variable holder
   const answer = [];
-  // first for loop that loops through the up to the parameter n
+  // first for loop that loops through up to the parameter n
   for (let i = 2; i < n; i++) {
     // create a variable and set the value to true (initial assumption for if the number i is prime)
     let isPrime = true
@@ -93,7 +93,15 @@ function findPrimes(n) {
 // 6! = 6 * 5 * 4 * 3 * 2 * 1
 // 3! = 3 * 2 * 1
 function findFactorial(n) {
-
+  // Starting variable 
+let total = 1;
+  // for loop to iterate through n going from n to 1. 
+  for (let i = n; i >= 1; i--) {
+    // times n by each iteration of i and then store it in the starting variable
+    total *= i;
+  }
+  //return total.
+  return total;
 }
 
 console.log(findPrimes(100));
