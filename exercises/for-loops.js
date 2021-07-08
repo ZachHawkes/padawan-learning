@@ -1,4 +1,4 @@
-const arr = [400, 832, 80, -10, 1, 34, 12, 365, 43, 17, 45, 14, 88, 100, 335, 100];  //sum = 1154, min = -10
+//const arr = [400, 832, 80, -10, 1, 34, 12, 365, 43, 17, 45, 14, 88, 100, 335, 100];  //sum = 1154, min = -10
 const testArray = [1, 2, 3, 4, 5];
 
 // find the minimum of an array
@@ -94,7 +94,7 @@ function findPrimes(n) {
 // 3! = 3 * 2 * 1
 function findFactorial(n) {
   // Starting variable 
-let total = 1;
+  let total = 1;
   // for loop to iterate through n going from n to 1. 
   for (let i = n; i >= 1; i--) {
     // times n by each iteration of i and then store it in the starting variable
@@ -104,7 +104,35 @@ let total = 1;
   return total;
 }
 
-console.log(findPrimes(100));
+// Square each digit of the given number
+// return a new number with the squared number
+// in place of original digit
+// 922 => 8144
+function squareEachDigit(n) {
+  // loop through the number
+  let numSquared = "";
+  const numToString = n.toString();
+  for (let i = 0; i < numToString.length; i++) {
+    // at eachposition square that number 
+   numSquared += Math.pow(numToString[i], 2);  
+   
+  }
+  // put all the numbers back together (but do not add them)
+  return Number(numSquared); 
+  // return that value
+}
+
+// perform the same function as above but:
+// use the .map and .join functions to get the answer
+function squareEachDigitMap(n) {
+
+}
+
+const firstAnswer = squareEachDigit(922);
+console.log(firstAnswer, " ", firstAnswer === 8144 ? 'Pass' : 'Fail')
+const secondAnswer = squareEachDigit(333);
+console.log(secondAnswer, " ", secondAnswer === 999 ? 'Pass' : 'Fail')
+
 
 module.exports = {
   findMinimum,
