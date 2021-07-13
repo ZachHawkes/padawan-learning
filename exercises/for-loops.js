@@ -124,8 +124,21 @@ function squareEachDigit(n) {
 
 // perform the same function as above but:
 // use the .map and .join functions to get the answer
-function squareEachDigitMap(n) {
+/* const nToString = n.toString();
+const split = nToString.split("");
+const square = split.maap(function(num) {
+  
+  return num * num;
+})
+const joinThem = square.join("");
+return joinThem; */
 
+function squareEachDigitMap(n) {
+  const square = n.toString().split("").map(function(num){
+    return num * num
+})
+const joinThem = parseInt(square.join(""));
+return joinThem; 
 }
 
 const firstAnswer = squareEachDigit(922);
